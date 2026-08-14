@@ -1,0 +1,10 @@
+{
+  "task_id": "TASK-001",
+  "incident": "coupon_empty_crash",
+  "file_path": "discounts.py",
+  "crash_line_number": 3,
+  "crash_line": "if coupon[\"code\"].lower() == \"save10\":",
+  "exception": "TypeError: 'NoneType' object is not subscriptable",
+  "base_sha256": "65967f2ce1472a799d2ff9a42554ede1c5a810ea3fe65e858e085b82837b99b7",
+  "root_cause": "calculate_discount accepts coupon: dict | None but indexes coupon before checking for None."
+}

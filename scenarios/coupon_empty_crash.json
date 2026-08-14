@@ -1,0 +1,20 @@
+{
+  "task_id": "TASK-001",
+  "title": "Checkout crashes when the client omits coupon",
+  "issue": {
+    "source": "github-issue",
+    "summary": "POST /checkout returns HTTP 500 when coupon is omitted.",
+    "severity": "P1",
+    "reproduction": "calculate_discount(100, None)"
+  },
+  "error_log": {
+    "exception": "TypeError: 'NoneType' object is not subscriptable",
+    "file": "discounts.py",
+    "line": 3
+  },
+  "patch": {
+    "target": "discounts.py",
+    "old": "    if coupon[\"code\"].lower() == \"save10\":\n",
+    "new": "    if not coupon:\n        return 0\n    if coupon[\"code\"].lower() == \"save10\":\n"
+  }
+}

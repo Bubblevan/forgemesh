@@ -1,0 +1,8 @@
+{
+  "task_id": "TASK-001",
+  "path": "discounts.py",
+  "base_sha256": "65967f2ce1472a799d2ff9a42554ede1c5a810ea3fe65e858e085b82837b99b7",
+  "after_sha256": "99f303b025357be81db26ae1b8f781b72ca73aff7e4547cf437f4ab92c56243e",
+  "guard": "allowed path + fresh source hash + six-line change budget",
+  "diff": "--- a/discounts.py\n+++ b/discounts.py\n@@ -1,5 +1,7 @@\n def calculate_discount(amount: int, coupon: dict | None) -> int:\n     \"\"\"Return the discount amount for a supported coupon.\"\"\"\n+    if not coupon:\n+        return 0\n     if coupon[\"code\"].lower() == \"save10\":\n         return amount // 10\n     return 0\n"
+}

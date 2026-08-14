@@ -1,0 +1,10 @@
+.venv/
+.uv-cache/
+__pycache__/
+.pytest_cache/
+.pytest-tmp/
+artifacts/
+.env
+.agentteams/
+agentteams-manager/
+tools/agentteams-install.windows.ps1

@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-001",
+  "decision": "pass",
+  "pytest_exit_code": 0,
+  "tests_run": 2,
+  "tests_passed": 2,
+  "tests_failed": 0,
+  "final_sha256": "99f303b025357be81db26ae1b8f781b72ca73aff7e4547cf437f4ab92c56243e"
+}
